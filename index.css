@@ -1,0 +1,224 @@
+*{
+    /*Search input and button wouldn't be able
+    to sit right next to eachother with out it. 
+    When disabled, the button will go th the next line. */
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+main{
+    width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    margin: 0 auto;
+    width: 100%;
+    height: 25vh;
+    
+    background: black;
+    color: white;
+    
+    /*Flex box*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+    /*Need to use this with the search's absolute position. 
+    Search bar sits reative to the header.*/
+    /*Locks the header to the top of the page.*/
+    
+    position: relative; 
+    
+}
+
+h1{
+    font-size: 2.67rem;
+}
+
+h3{
+    padding-top: .2em;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: #6B7280;
+}
+
+.header-plus{
+    width: 10%;
+    margin-right: .40em;
+}
+
+/*****************************
+           form
+*****************************/
+
+.form-container{
+    /*Absolute positions allows the form to sit 
+    inbetween and ontop of the header and section*/
+    position: absolute;
+    width: 100%;
+    
+    /*Using a percentage allows the bar 
+    to move with the screen.*/
+    top: 90%;
+    
+}
+
+form{
+    max-width: 90%;
+    margin: auto;
+}
+
+input{
+    
+    /*Styling the search bar*/
+    background: #f1f1f1;
+    color: #6B7280;
+    width: 80%;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-radius: 5px 0 0 5px;
+    
+    
+    float: left; 
+
+    /*This adds the spy glass icon to search bar*/
+    background-image: url(img/spy-glass.png);
+    background-repeat: no-repeat;
+    text-indent: 35px;
+    background-position: 3% 50%;
+    background-size: 20px;
+    
+    
+}
+
+.search-btn{
+    /* Float works similar to img align in Docs. 
+    Allows for the button to sit flush next to the search bar.*/
+    float: left;
+    
+    /*Styling th button*/
+    width: 20%;
+    padding: 10px;
+    background: #D1D5DB;
+    color: #374151;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+   
+}
+
+/*****************************
+     Empty Movie Section
+*****************************/
+
+section{
+    
+    /*height: 75vh;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* empty watch list */
+.empty-watchlist{
+    padding-top: 30vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.empty-watchlist>img{
+    max-width: 70%;
+    margin: 0 auto;
+    
+}
+
+.empty-watchlist>h3{
+    color: #DFDDDD;
+}
+
+
+/*****************************
+ Movie Divs: created withcode
+*****************************/
+.search-results,
+.saved-films{
+    /* the padding her is to push the div under the header*/
+    margin-top: 2em;
+    margin-right: 2em;
+}
+
+.movie{
+    padding: 1em;
+    display: flex;
+    border-bottom: solid 1px black;
+}
+
+.movie-info{
+    
+    width: 80%;
+    margin: 0 auto;
+}
+
+.poster{
+    max-width: 100%;
+    display: block;
+    margin: auto
+}
+
+.movie-poster{
+    margin: 1em ;
+    width: 20%;
+    order: -1;
+}
+
+.movie-title, 
+.movie-stats{
+    display: flex;
+}
+
+.movie-title p, 
+.movie-stats p{
+    margin-left: 2em
+}
+.movie-title p{
+    padding-top: .5em;
+}
+
+.movie-stats p:nth-of-type(1){
+    margin-left: 0;
+}
+
+.movie:last-child{
+    border: none;
+}
+
+.add-to-watchlist img,
+.remove-from-watchlist img{
+    margin-right: .35em;
+
+}
+
+.add-to-watchlist,
+.remove-from-watchlist{
+    border: none;
+    background: none;
+    margin-left: 1em;
+    cursor: pointer;
+}

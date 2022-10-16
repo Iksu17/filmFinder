@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <!--Font Link-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <main>
+            <header>
+                <!---->
+                <h1>Film Finder</h1>
+                <a href="watchlist.html"><img src="img/plus-white.png" alt="star image" class="header-plus">My Watchlist</a>
+                
+                
+                <!--Search Bar-->
+                 <div class="form-container">
+                    <form id="new-search">
+                        <input type="text" placeholder="Search..." name="search" id="search">
+                        <button type="submit" class="search-btn">Search</button>
+                    </form>
+                </div>
+            </header>
+      
+            <section>
+                <!--Empty search. This div will be put to display none when search comes in and the search div will be activated-->
+                <div class="empty-watchlist" id="empty-watchlist">
+                    <img src="img/icon.png" alt="">
+                    <h3>Start exploring</h3>
+                </div>
+                
+                <!--Container for search results. Contents will be built in js-->
+                <div class="search-results" id="search-results"></div>
+            </section>
+        </main>
+        
+        
+        <script src="index.js"></script>
+    </body>
+</html>
