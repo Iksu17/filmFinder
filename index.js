@@ -1,5 +1,5 @@
 let movieTitle = []
-const apiKey = "ccc34f1"
+const apiKey = ""
 
 
 function addToWatchList(){
